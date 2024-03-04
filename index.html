@@ -25,6 +25,7 @@
         <input type="number" id="importe" placeholder="Importe">
 
         <button onclick="Gasto()">Añadir</button>
+        <button onclick="reset()">Reset</button>
     </div>
 
     <div id="lista"></div>
@@ -44,6 +45,11 @@
 
             total.textContent = parseFloat(total.textContent) + importe;
 
+        }
+
+        function reset() {
+            document.getElementById("concepto").value = "";
+            document.getElementById("importe").value = "";
         }
     </script>
 
